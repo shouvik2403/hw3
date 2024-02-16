@@ -12,7 +12,6 @@ class PlacesController < ApplicationController
   end  
 
   def new
-    reset_session
     # render view with new place form
   end  
 

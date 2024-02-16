@@ -9,14 +9,14 @@
 
 <body>
   
-  <h1>Places I've Been</h1>
+  <h1>Places I've Been<br></h1>
 
   <ul>
     <% for place in @places %>
+      <br>
       <li>
         <a href="/places/<%= place["id"] %>">
-        <%= place["name"] %>
-        </a>
+        <%= place["name"] %> </a>
       </li>
     <% end %>
   </ul>

@@ -11,8 +11,8 @@
     <%= @place["name"] %>
   </h1>
 
-  <br>
   <% if !@entries.empty? %>
+    <br>
     <% for entry in @entries %> 
         <ul>
         <p><h3> <%= entry["title"]%>  </h2></p>          
@@ -25,13 +25,11 @@
   <% end %>
 
   <p>
-    <br>
-    <a href="/entries/new?place_id=<%= @place["id"] %>">New Post</a>
+    <br><a href="/entries/new?place_id=<%= @place["id"] %>">New Post</a>
   </p> 
 
   <p>
-    <br>
-    <a href="/places">Back to all Places</a>
+    <br><a href="/places">Back to all Places</a>
   </p> 
 
 </body>

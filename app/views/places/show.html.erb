@@ -11,12 +11,26 @@
     <%= @place["name"] %>
   </h1>
 
-  <p> 
-    <br> Things I did when I was there will appear in Part 2 <br>
-  </p>  
+  <br>
+  <% if !@entries.empty? %>
+    <% for entry in @entries %> 
+        <ul>
+        <p><h3> <%= entry["title"]%>  </h2></p>          
+        <p><h5> <%= entry["posted_on"]%> </h5></p>
+        <p> <%= entry["description"]%> </p>
+        </ul><br>       
+    <% end %>
+  <% else %>
+    <p>No posts yet!</p>
+  <% end %>
 
   <p>
-    <br><br>
+    <br>
+    <a href="/entries/new?place_id=<%= @place["id"] %>">New Post</a>
+  </p> 
+
+  <p>
+    <br>
     <a href="/places">Back to all Places</a>
   </p> 
 
